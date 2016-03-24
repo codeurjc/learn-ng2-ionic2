@@ -1,0 +1,12 @@
+<ion-navbar *navbar>
+    <ion-title>Home</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-card *ngFor="#elem of elems"
+        (click)="goToDetails(elem)">
+        <ion-card-header>
+            {{ elem.name }}
+        </ion-card-header>
+    </ion-card>
+</ion-content>
