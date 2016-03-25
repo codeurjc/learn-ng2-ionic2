@@ -1,0 +1,11 @@
+<h1>A checklist</h1>
+<button (click)="refresh()">Refresh</button>
+
+<item *ngFor="#item of items" [item]="item"></item>
+
+<img *ngIf="loading" src="img/spinner.gif">
+<p *ngIf="error">{{error}}</p>
+
+<hr>
+<input #desc type='text'>
+<button (click)="addItem(desc.value); desc.value=''">Add</button>

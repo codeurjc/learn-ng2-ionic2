@@ -1,0 +1,11 @@
+<h1>A checklist</h1>
+<button (click)="refresh()">Refresh</button>
+
+<item *ngFor="#item of items"
+  [item]="item"
+  (checked)="updateItem(item)"
+  (remove)="removeItem(item)"></item>
+
+<hr>
+<input #desc type='text'>
+<button (click)="addItem(desc.value); desc.value=''">Add</button>

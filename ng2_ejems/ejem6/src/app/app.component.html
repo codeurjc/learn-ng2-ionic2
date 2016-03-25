@@ -1,0 +1,32 @@
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+
+<input #male name="gender" type="radio" value="Male"
+     (click)="gender = male.value" [checked]="gender == 'Male'"/> Male
+<input #female name="gender" type="radio"  value="Female"
+     (click)="gender = female.value" [checked]="gender == 'Female'"/> Female
+Selected gender is <strong>{{gender}}</strong>
+<br>
+
+<input type="checkbox" [(ngModel)]="angular" />
+Angular
+<input type="checkbox" [(ngModel)]="javascript" /> JavaScript
+<br>
+<ul>
+  <li *ngIf="angular">Angular</li>
+  <li *ngIf="javascript">JavaScript</li>
+</ul>
+
+<span *ngFor="#item of items">
+  <input  type="checkbox" [(ngModel)]="item.selected" /> {{item.value}}
+</span>
+<br>
+<ul>
+  <template ngFor #item [ngForOf]="items">
+    <li *ngIf="item.selected">{{item.value}}</li>
+  </template>
+</ul>
+
+
+
+<button (click)="change()">Change</button>

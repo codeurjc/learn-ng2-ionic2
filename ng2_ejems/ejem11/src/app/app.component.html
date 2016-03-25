@@ -1,0 +1,6 @@
+<h1>Notes</h1>
+
+<input #text type="text">
+<button (click)="add(text.value); text.value =''">Add</button>
+
+<p *ngFor="#elem of elems">{{elem}}</p>
