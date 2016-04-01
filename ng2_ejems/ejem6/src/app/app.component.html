@@ -1,10 +1,12 @@
 <input type="text" [(ngModel)]="name">
 <p>{{name}}</p>
 
-<input #male name="gender" type="radio" value="Male"
-     (click)="gender = male.value" [checked]="gender == 'Male'"/> Male
-<input #female name="gender" type="radio"  value="Female"
-     (click)="gender = female.value" [checked]="gender == 'Female'"/> Female
+<input name="gender" type="radio"
+     (click)="gender = 'Male'" [checked]="gender == 'Male'"/> Male
+
+<input name="gender" type="radio"
+     (click)="gender = 'Female'" [checked]="gender == 'Female'"/> Female
+
 Selected gender is <strong>{{gender}}</strong>
 <br>
 
